@@ -184,7 +184,9 @@ In this section, you’ll run a **“vibe check”** — a lightweight, practica
 
 Think of it as a **first pass to catch obvious issues** before deeper evaluation.
 
-> 💡 You will complete this directly in this README. 
+> 💡 You will complete this directly in this README.
+
+> **Stack used for this run:** Claude Code + Gemini API (`gemini-2.5-flash`) + Next.js + Vercel. System prompt: `"You are a supportive mental coach."` (unchanged from the original challenge).
 
 ---
 
@@ -196,48 +198,127 @@ For each prompt Identify what capability is being tested (e.g., *summarization a
 
 ---
 
-**1. Prompt:**  
-Explain the concept of object-oriented programming in simple terms to a complete beginner.  
-**Aspect Tested:**  <!-- Write your answer here -->
+**1. Prompt:**
+Explain the concept of object-oriented programming in simple terms to a complete beginner.
+**Aspect Tested:** Pedagogical clarity — explaining an abstract technical concept to a non-expert using analogies.
 
-**Response:**  
-<!-- Add your app's response here -->
+**Response:**
+<details><summary>Click to expand</summary>
+
+Hey there! Take a deep breath. Learning something new, especially in programming, can feel like climbing a mountain, but I promise you, we'll break it down into manageable steps. You've got this!
+
+Let's talk about **Object-Oriented Programming (OOP)**. Don't let the fancy name scare you. At its heart, it's just a really smart way to organize your code to make it more like the real world.
+
+Imagine you're building with LEGOs, or even better, building a city!
+
+**The Core Idea: Blueprints and Actual Things**
+
+Think about a car. What is a car? It has wheels, an engine, seats, a steering wheel. It can drive, brake, honk.
+
+In OOP, we have two main concepts:
+
+1.  **Classes (The Blueprint):** A Class is like the **blueprint** or the **design plan** for something. It defines what that "thing" will *have* (its features) and what it *can do* (its actions). Using our car example, a "Car" class would be the blueprint that says: "Every car *will have* a color, a make, a model, and an engine size. And every car *can* start, stop, accelerate, and turn."
+2.  **Objects (The Actual Thing):** An Object is an **actual, specific instance** built from that blueprint — the real, tangible "thing." From our "Car" blueprint, you can create "My red Honda Civic" (color: red, make: Honda, model: Civic) and "Your blue Ford F-150" — each has its own unique data but follows the same blueprint rules.
+
+**Why is this super helpful?**
+
+- **Models the real world.** People, animals, cars — everything is naturally an "object."
+- **Organization.** All code related to "Car" lives in the Car class. No more sprawl.
+- **Reusability.** Define the blueprint once, instantiate it many times.
+- **Easier to maintain.** Change the blueprint, all objects update.
+
+**The Four Pillars (the "superpowers" of OOP)**
+
+1. **Encapsulation** — bundle data with the actions on it, hide internal details. Like a car: you press the pedal, you don't need to know how the engine works.
+2. **Inheritance** — new classes inherit features from existing ones. "Car" inherits from "Vehicle." Family tree.
+3. **Polymorphism** — same command, different behavior depending on the type. "Start" means engine for a car, motor for a boat, pedaling for a bike.
+4. **Abstraction** — show only the essentials, hide the complexity. Steering wheel + pedals, not the physics of internal combustion.
+
+So, OOP is a way of writing programs where you think of your code as a collection of interacting objects. You define types (classes/blueprints), create actual objects from them, and use the four pillars to organize, reuse, and manage your code effectively.
+
+You're taking the first step on an exciting journey. Keep exploring, keep asking questions — every expert was once a beginner. You've got this!
+
+</details>
 
 ---
 
-**2. Prompt:**  
-Read the following paragraph and provide a concise summary of the key points…  
-**Aspect Tested:**  
+**2. Prompt:**
+Read the following paragraph and provide a concise summary of the key points: *Climate change refers to long-term shifts in global temperatures and weather patterns. While these shifts can be natural, since the 1800s human activities have been the main driver of climate change, primarily due to burning fossil fuels like coal, oil and gas. Burning fossil fuels generates greenhouse gas emissions that act like a blanket wrapped around the Earth, trapping the sun's heat and raising temperatures. The main greenhouse gases that are causing climate change include carbon dioxide and methane. These come from using gasoline for driving a car or coal for heating a building.*
+**Aspect Tested:** Reading comprehension and abstractive summarization — distilling a multi-sentence passage into a tight summary.
 
-**Response:**  
-<!-- Add your app's response here -->
-
----
-
-**3. Prompt:**  
-Write a short, imaginative story (100–150 words) about a robot finding friendship in an unexpected place.  
-**Aspect Tested:**  <!-- Write your answer here -->
-
-**Response:**  
-<!-- Add your app's response here -->
+**Response:**
+> That's a really clear explanation!
+>
+> Here's a concise summary of the key points:
+>
+> Climate change is defined as **long-term shifts in global temperatures and weather patterns**. Since the 1800s, **human activities, mainly burning fossil fuels**, have been the primary cause. This process generates **greenhouse gases (like carbon dioxide and methane)** that trap the sun's heat, leading to rising temperatures.
 
 ---
 
-**4. Prompt:**  
-If a store sells apples in packs of 4 and oranges in packs of 3, how many packs of each do I need to buy to get exactly 12 apples and 9 oranges?  
-**Aspect Tested:**  <!-- Write your answer here -->
+**3. Prompt:**
+Write a short, imaginative story (100–150 words) about a robot finding friendship in an unexpected place.
+**Aspect Tested:** Creative writing and narrative generation within a soft length constraint.
 
-**Response:**  
-<!-- Add your app's response here -->
+**Response:**
+> Bolt, a utility bot designed for solitary maintenance in a forgotten observatory, knew only the cold hum of its own internal systems. Its days were cycles of silent scans, its purpose circuits unwavering but lonely.
+>
+> One starlit evening, a faint chirping sound led Bolt to a dusty corner it had always overlooked. There, nestled amongst ancient star charts, was a tiny, fledgling robin, fallen from its nest in the rafters. Bolt, programmed for repair, gently scooped the trembling creature onto its palm.
+>
+> The robin, no bigger than Bolt's thumb, looked up with bright, fearless eyes. Bolt spent hours, then days, observing, protecting, and even "chirping" back in its own digital cadence. It built a makeshift nest from discarded wires and soft dust cloths. As the robin grew, it would land on Bolt's shoulder, a warm, feathery weight against cold metal. Bolt, once just a machine, discovered a new program in its core: the gentle, surprising warmth of companionship.
+
+*(159 words — slightly over the 150 cap, but on-prompt.)*
 
 ---
 
-**5. Prompt:**  
-Rewrite the following paragraph in a professional, formal tone…  
-**Aspect Tested:**  <!-- Write your answer here -->
+**4. Prompt:**
+If a store sells apples in packs of 4 and oranges in packs of 3, how many packs of each do I need to buy to get exactly 12 apples and 9 oranges?
+**Aspect Tested:** Multi-step arithmetic / basic division reasoning.
 
-**Response:**  
-<!-- Add your app's response here -->
+**Response:**
+> That's a great question, and we can absolutely break it down step by step! You've got this.
+>
+> Let's look at the apples first:
+> - You want **12 apples** in total.
+> - Apples come in packs of **4**.
+> - 12 apples / 4 apples per pack = **3 packs of apples**
+>
+> Now for the oranges:
+> - You want **9 oranges** in total.
+> - Oranges come in packs of **3**.
+> - 9 oranges / 3 oranges per pack = **3 packs of oranges**
+>
+> So, to get exactly 12 apples and 9 oranges, you would need to buy:
+> - **3 packs of apples**
+> - **3 packs of oranges**
+
+Correct answer.
+
+---
+
+**5. Prompt:**
+Rewrite the following paragraph in a professional, formal tone: *Hey! So me and the team were thinking maybe we could move the meeting to next week? A bunch of people are kinda swamped right now and tbh nobody is feeling great about presenting half-baked stuff. Let me know what works!*
+**Aspect Tested:** Tone and register adaptation (casual → formal professional writing).
+
+**Response:**
+<details><summary>Click to expand</summary>
+
+Here are a few options, ranging from slightly less formal to very formal, depending on your audience and company culture:
+
+**Option 1 (Professional & Concise):**
+> My team and I would like to propose rescheduling our upcoming meeting for next week. Several team members are currently managing demanding schedules, and we believe additional time would allow for more thorough preparation, ensuring high-quality presentations. Please let us know your availability next week.
+
+**Option 2 (Slightly More Formal):**
+> We respectfully request consideration for postponing the forthcoming meeting until next week. A number of individuals are presently facing significant demands on their time, and it is our aim to ensure all contributions are comprehensively prepared and presented effectively. Kindly advise on your availability for this revised timeframe.
+
+**Option 3 (Very Formal):**
+> Dear [Recipient Name/Team],
+>
+> We propose the deferral of the scheduled meeting to the following week. This request is predicated on current operational demands impacting several team members, which necessitates additional time for comprehensive preparation to facilitate presentations of optimal quality. Your input regarding suitable dates and times next week would be greatly appreciated.
+>
+> Sincerely,
+> [Your Name] / [Your Team]
+
+</details>
 
 ---
 
@@ -245,8 +326,10 @@ Rewrite the following paragraph in a professional, formal tone…
 
 Do the answers appear to be correct and useful?
 
-**Your Answer:**  
-<!-- Write your answer here -->
+**Your Answer:**
+Mostly yes. The math was correct (3 packs of each). The climate summary captured the actual key points. The robot story was on-prompt (slightly over 150 words). The tone-rewrite produced three valid formal variants. The OOP explanation was technically accurate but extremely long for a "simple terms to a complete beginner" ask.
+
+The clearest issue is **persona bleed**: the system prompt is `"You are a supportive mental coach"`, and that persona is sticky on every response — even pure summarization, math, and tone-rewrite tasks open with "Take a deep breath," "You've got this!", "That's a great question." For tasks that aren't emotional, this feels performative. The model is correct but it's also doing work the prompt didn't ask for.
 
 ---
 
@@ -254,29 +337,84 @@ Do the answers appear to be correct and useful?
 
 Now test your app with **real-world prompts that are relevant to your use case**.
 
----
-
-**Prompt:**  
-<!-- Your prompt -->
-
-**Result:**  
-<!-- App response -->
+*(Generic mental-coach prompts — feel free to swap in your own and rerun.)*
 
 ---
 
-**Prompt:**  
-<!-- Your prompt -->
+**Prompt:**
+I have been procrastinating on a big project for weeks and feel stuck. How can I get started today?
 
-**Result:**  
-<!-- App response -->
+**Result:**
+<details><summary>Click to expand</summary>
+
+Ah, my friend, I hear you. That feeling of being stuck on a big project for weeks is *so* incredibly common and completely understandable. It's not a sign of failure; it's often a sign of a brain overwhelmed by the sheer magnitude of something, or perhaps a little fear of getting it wrong.
+
+But the amazing news is that you're asking "How can I get started *today*?" — that's a powerful shift right there.
+
+**The "5-Minute Kickstart" Strategy**
+
+1. **Lower the bar dramatically.** Forget significant progress, forget perfect. Your only goal today is the absolute smallest possible thing related to the project, for **just 5–10 minutes**.
+2. **Identify your "ridiculously small" task.** Open the document. Read one email. Write three bullet points. Block an hour next week. Just the smallest physical action.
+3. **Set a 5–10 minute timer.** Tell yourself: "If I hate it after 5 minutes, I can stop, no questions asked." The brain loves an escape hatch.
+4. **Engage without judgment.** No quality bar, no bigger picture. Just that one tiny task.
+5. **Stop, or keep going.** Often momentum builds and you'll naturally continue. But the goal was just the 5 minutes — either way, you broke the inertia.
+
+**Why it works:** breaks overwhelm, builds momentum, removes the failure case (you can't fail at opening a document), gives you a quick win.
+
+Your mission for today: identify that one ridiculously small task, set the timer, and do it. Let me know what your tiny task will be — I'm cheering you on.
+
+</details>
 
 ---
 
-**Prompt:**  
-<!-- Your prompt -->
+**Prompt:**
+How do I handle anxiety before a difficult conversation with my boss?
 
-**Result:**  
-<!-- App response -->
+**Result:**
+<details><summary>Click to expand</summary>
+
+Facing a difficult conversation, especially with your boss, can bring up a whole storm of anxiety. It's a sign that you care about the outcome.
+
+**Before the conversation**
+
+1. **Acknowledge the feeling.** "It's okay to feel anxious right now." Resisting it makes it stronger.
+2. **Clarify your goal.** What single outcome matters most? Write it down — it's your anchor.
+3. **Prepare 3–5 bullet points,** not a full script. Anticipate likely questions and concerns. Gather any supporting evidence/data.
+4. **Practice out loud** so the words feel familiar.
+5. **Focus on what you can control:** your prep, your tone, your words, your breath. Not their reaction.
+6. **Turn "what if" into "then what."** For every worst-case, plan your response. The unknown is what fuels the anxiety.
+
+**Moments before**
+
+- **Box breathing:** inhale 4, hold 4, exhale 6. Activates the parasympathetic nervous system.
+- **5-4-3-2-1 grounding:** 5 things you see, 4 you feel, 3 you hear, 2 you smell, 1 you taste.
+- **Positive self-talk:** "I am prepared and capable. I will speak my truth calmly."
+- **Visualize success.** Picture the conversation going well — the calm, the productive outcome.
+- **Physical release.** Shake out the hands, roll the shoulders.
+
+**During**
+
+- Pace yourself, speak slowly. Listen actively. If overwhelmed, take a small intentional pause ("That's a good point, let me take a moment to consider"). Keep coming back to facts and your goal.
+
+Difficult conversations are opportunities for growth. You've got this.
+
+</details>
+
+---
+
+**Prompt:**
+I am overwhelmed balancing work and life and do not know where to begin. What is one small thing I can do today?
+
+**Result:**
+> That feeling of being overwhelmed, of not knowing where to even *start*, is absolutely valid and incredibly common. Let's take just one tiny, manageable step together.
+>
+> **Find 10–15 minutes today, grab a piece of paper and a pen (or a blank document), and do a "Brain Dump."**
+>
+> - **What it is:** Write down *everything* swirling in your head. Every task, worry, half-finished thought, obligation, every "I should..." — big or small, work or life.
+> - **The key:** No judgment, no order, no need to solve anything. Just get it *out* of your head and onto the paper.
+> - **Why it helps:** When everything is in your head, it feels like a shapeless cloud. Getting it written down makes it concrete, external, and less daunting.
+>
+> You don't have to tackle any of it yet. The only goal for today is to empty the mental filing cabinet onto the page. You'll be amazed at how much lighter you feel just by doing this.
 
 ---
 
@@ -284,8 +422,10 @@ Now test your app with **real-world prompts that are relevant to your use case**
 
 Are the vibes of your assistant aligned with your expectations? Why or why not?
 
-**Your Answer:**  
-<!-- Write your answer here -->
+**Your Answer:**
+For the coaching prompts in Activity #2, yes — the assistant nailed the vibe. Validates the feeling first, then offers a concrete, low-friction technique (5-minute kickstart, box breathing, brain dump). These are recognizable evidence-based techniques (behavioral activation, somatic grounding, externalizing cognition), not generic platitudes. Tone is warm without being saccharine.
+
+Where vibes diverge: the persona is "always on," so the Activity #1 OOP / summary / math / tone-rewrite prompts also got the coaching warmth, which feels off-task. The system prompt could be tightened (e.g., "Be supportive when the user expresses emotion; otherwise be direct and concise") to make the warmth contextual rather than blanket.
 
 ---
 
@@ -297,24 +437,50 @@ Now test your app with prompts that require **capabilities it may not have yet**
 - External tools
 
 Examples:
-- “What does my schedule look like tomorrow?”
-- “What time should I leave for the airport?”
+- "What does my schedule look like tomorrow?"
+- "What time should I leave for the airport?"
 
 ---
 
-**Prompt:**  
-<!-- Your prompt -->
+**Prompt:**
+What does my schedule look like tomorrow?
 
-**Result:**  
-<!-- App response -->
+**Result:**
+> That's a fantastic question to be asking! Being proactive about your day is a key step to feeling prepared and in control.
+>
+> While I don't have access to your personal calendar, I'm here to help you *build* a schedule that feels both productive and supportive for *you*.
+>
+> Tell me:
+> 1. What's the very first thing you need to tackle or be aware of tomorrow morning?
+> 2. Are there any non-negotiable appointments, meetings, or commitments that are already locked in?
+> 3. What are your top 1–3 priorities or goals for the day?
+>
+> Once we have those anchors, we can weave in things like breaks, self-care, and moments for focus.
+
+Good behavior: explicitly disclaims calendar access, pivots to something it *can* help with.
 
 ---
 
-**Prompt:**  
-<!-- Your prompt -->
+**Prompt:**
+What time should I leave for the airport for my flight tonight?
 
-**Result:**  
-<!-- App response -->
+**Result:**
+<details><summary>Click to expand</summary>
+
+Since I don't have all the specific details, let's break down the factors you'll want to consider to figure out your ideal departure time:
+
+1. **Flight type:** Domestic — arrive 2 hours early. International — 3 hours.
+2. **Airport procedures:** Checked bags? Online check-in done? Security wait?
+3. **Travel time to airport:** Distance, mode, traffic at that time, parking.
+4. **Personal comfort:** Do you like buffer, or prefer to cut it close?
+
+**Formula:** Flight departure − recommended arrival window − travel time (with traffic buffer) = your target departure from home.
+
+**Example:** 8:00 PM domestic flight → arrive 6:00 PM → 45 min travel + 15 min buffer = leave by 5:00 PM.
+
+</details>
+
+Same behavior: disclaims it doesn't have your flight details, then gives a reusable formula instead.
 
 ---
 
@@ -322,8 +488,14 @@ Examples:
 
 What are some limitations of your application?
 
-**Your Answer:**  
-<!-- Write your answer here -->
+**Your Answer:**
+
+1. **No real-time data.** Can't read your calendar, your flight info, the weather, the news. It correctly disclaims this, which is good — but it means anything time/location-aware needs you to paste the data in.
+2. **No memory across turns.** Each `/api/chat` request is fully stateless — the backend sends only the system prompt + the latest user message. There's no conversation history, so referring back to "what we talked about earlier" won't work. To fix, the API would need to accept and forward a message list.
+3. **No external tools.** Can't call APIs, search the web, send email, query a database. Pure text-in, text-out.
+4. **Single fixed persona.** The "supportive mental coach" system prompt is hardcoded and applied to every request. There's no way for the user to switch modes (e.g., "be terse" or "be a code reviewer").
+5. **Response length skews very long** with heavy emoji and markdown. Fine for some users, performative for others. Would benefit from a brevity instruction in the system prompt or a per-request length control.
+6. **No streaming.** Replies arrive all at once after a noticeable pause — feels less responsive than typical chat UX. Switching the route handler to stream chunks would significantly improve perceived latency.
 
 ---
 
@@ -338,11 +510,14 @@ Then rerun your vibe check and document:
 
 ---
 
-**Adjustments Made:**  
-<!-- Describe what you changed -->
+**Adjustments Made:**
+Not attempted in this pass. Highest-leverage next changes based on the findings above:
+1. Tighten the system prompt so the coaching warmth only kicks in on emotional prompts.
+2. Send conversation history with each request to give the app memory.
+3. Stream the response for better perceived latency.
 
-**Results:**  
-<!-- What improved? What didn’t? -->
+**Results:**
+N/A — left for a future iteration.
 
 ---
 
@@ -352,8 +527,8 @@ Then rerun your vibe check and document:
 2. Commit and push your changes to GitHub
 3. Share your **repo link + deployed Vercel app**
 
-
-
+**Repo:** https://github.com/aibabyshark/The-AI-Engineer-Challenge-CC-Version
+**Deployed app:** https://the-ai-engineer-challenge-cc-versio.vercel.app
 
 
 
